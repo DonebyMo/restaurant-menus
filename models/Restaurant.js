@@ -5,7 +5,7 @@ const { Sequelize } = require("sequelize");
 let Restaurant = sequelize.define("restaurant", {
   name: Sequelize.STRING,
   location: Sequelize.STRING,
-  Cuisine: Sequelize.STRING,
+  cuisine: Sequelize.STRING,
 });
 
 module.exports = { Restaurant };
