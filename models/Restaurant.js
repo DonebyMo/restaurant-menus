@@ -2,7 +2,7 @@ const { sequelize } = require("../db");
 const { Sequelize } = require("sequelize");
 
 // TODO - create a Restaurant model
-const restaurant1 = await Restaurant.create({
+let Restaurant = sequelize.define("restaurant", {
   name: Sequelize.STRING,
   location: Sequelize.STRING,
   Cuisine: Sequelize.STRING,
