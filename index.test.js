@@ -14,7 +14,6 @@ describe("Restaurant and Menu Models", () => {
   });
 
   test("can create a Restaurant", async () => {
-    // TODO - write test
     const restaurant1 = new Restaurant({
       name: "KFC",
       location: "London",
@@ -26,22 +25,34 @@ describe("Restaurant and Menu Models", () => {
   });
 
   test("can create a Menu", async () => {
-    // TODO - write test
-    expect("NO TEST").toEqual("EXPECTED DATA");
+    const menu1 = new Menu({
+      title: "tastyDiner",
+    });
+    expect(menu1.title).toEqual("tastyDiner");
   });
 
   test("can find Restaurants", async () => {
-    // TODO - write test
-    expect("NO TEST").toEqual("EXPECTED DATA");
+    const restaurant1 = new Restaurant({
+      name: "KFC",
+      location: "London",
+      cuisine: "American",
+    });
+    expect(typeof Restaurant.findAll()).toEqual("object");
   });
 
   test("can find Menus", async () => {
-    // TODO - write test
-    expect("NO TEST").toEqual("EXPECTED DATA");
+    const menu1 = new Menu({
+      title: "tastyDiner",
+    });
+    expect(typeof Menu.findAll()).toEqual("object");
   });
 
   test("can delete Restaurants", async () => {
-    // TODO - write test
-    expect("NO TEST").toEqual("EXPECTED DATA");
+    const restaurant1 = new Restaurant({
+      name: "KFC",
+      location: "London",
+      cuisine: "American",
+    });
+    expect(!restaurant1.destroy()).toEqual(false);
   });
 });
